@@ -38,7 +38,7 @@ jobs:
       run: composer install --prefer-dist --no-progress --no-suggest
 
     - name: Install tools
-      run: ./scripts/install_tools.sh
+      run: sudo ./scripts/install_tools.sh
       shell: bash
 
     - name: Run test suite
