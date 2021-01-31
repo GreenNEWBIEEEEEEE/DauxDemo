@@ -18,8 +18,10 @@ jobs:
         extensions: mbstring, dom, intl
     - name: Install dependencies
       run: composer install --prefer-dist --no-progress --no-suggest
+    - name: Make excutable
+      run: chmod +x bin/daux
     - name: Generate documentation
-      run: sudo bin/daux generate --value html.plausible_domain=daux.io
+      run: bin/daux generate --value html.plausible_domain=daux.io
     - name: Deploy 🚀
       uses: JamesIves/github-pages-deploy-action@3.7.1
       with:
